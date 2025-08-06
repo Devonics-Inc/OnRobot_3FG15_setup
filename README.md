@@ -71,7 +71,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
 #### This method of modbus communication will be controlled by the lua programs in the Fairino web app. Before using the modbus control, please note the disclaimed below. 
 
 #### Disclaimer:
-![alt text](<Screenshot from 2025-08-05 14-42-16.png>)
+![alt text](<Modbus_disclaimer.png>)
 
 ### Step 1: Connecting your gripper via Modbus RTU 
     Find the m12-8pin cable with exposed wires on the end (7 wires: 3 24v, 3 GND, 1 PE)
@@ -92,7 +92,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
 
     Navigate to Application->Tool App -> Peripheral Protocol and where it says "Extention Axis" in the drop down, select "Modbus Master" (shown below)
 
-![alt text](<Screenshot from 2025-08-06 11-02-47.png>)
+![alt text](<PeriphProto.png>)
 
 
 ### Step 3: Programming your gripper in the Web App
@@ -102,10 +102,10 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
     Developer Note: Setting the "target diameter" or other "target" paramters will not cause your gripper to move. After setting the "target" registers, you must call the "grip" function with the "Control" register (addr 0x03).
 
 
-![alt text](<Screenshot from 2025-08-05 14-41-31.png>)
+![alt text](<Modbus_pg1.png>)
 
-![alt text](<Screenshot from 2025-08-05 14-41-48.png>)
+![alt text](<Modbus_pg2.png>)
 
-![alt text](<Screenshot from 2025-08-05 14-42-01.png>)
+![alt text](<Modbus_pg3.png>)
 
 *Thank you to OnRobot for providing images from the User Manual*
