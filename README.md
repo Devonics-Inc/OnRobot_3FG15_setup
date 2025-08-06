@@ -1,12 +1,20 @@
 # OnRobot 3FG15 ->Fairino setup
 This repo contains a README with steps to set up controls for your OnRobot 3 Finger Gripper (3FG) for either IO or Modbus RTU communication.
 
-#### Step 0 will be the same for both modbus and IO communication
+### For the 3FG Data sheet, go to their homepage at https://onrobot.com/storage/datasheets/3fg15.pdf
 
-### Step 0: Connecting your gripper and the OnRobot Quick Changer
-#### Connect your gripper to the mounting plate by sliding the metal bar into the latch of the plate (shown below):
+
+
+## Step 0: Connecting your gripper and the OnRobot Quick Changer
+### (This step will be the same for all kinds of gripper control)
+
+### Connect your gripper to the mounting plate by sliding the metal bar into the latch of the plate (shown below):
 
 ![alt text](image-1.png)
+
+<br>
+<br>
+
 
 # Setting up the OnRobot gripper for IO communication:
 #### IO communication will limit you to 256 IO combinations that can have control for gripper force, target diameter, etc.
@@ -26,7 +34,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
 
 ![alt text](image-3.png)
 
-### Step 1: Wiring of the Fairino control box and OnRobot control box
+## Step 1: Wiring of the Fairino control box and OnRobot control box
      First, you'll want to take your external power supply and connect the positive to the E-24v port on the top rail and the ground to any E-0v port on the Fairino control box
 
      Find and insert the green screw terminal block for the back of the OnRobot box.
@@ -54,7 +62,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
         |    L E-0V -> Power supply (-)
         L DOx <-> OnRobot:DIx
 
-### Step 2: Creating your gripper program
+## Step 2: Creating your gripper program
     Connect your ethernet cable from your OnRobot control box to your computer.
 
     In any browser, type in the IP address of your OnRobot control box (default 192.168.1.1) to navigate to the WebClient.
@@ -73,7 +81,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
 #### Disclaimer:
 ![alt text](<Modbus_disclaimer.png>)
 
-### Step 1: Connecting your gripper via Modbus RTU 
+## Step 1: Connecting your gripper via Modbus RTU 
     Find the m12-8pin cable with exposed wires on the end (7 wires: 3 24v, 3 GND, 1 PE)
 
     Connect ONE of the 24V and GND to your 24V 1.5A power supply 
@@ -83,7 +91,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
     Now, you can connect the m8-8pin to m12-8pin. This will plug into your gripper and allow modbus communication from the control box to the gripper.
 
 
-### Step 2: Programming your gripper through the Fairino web app:
+## Step 2: Programming your gripper through the Fairino web app:
     To set up your robot for modbus communication, you need to open the Fairino web app by opening any web browser and entering the IP address of your control box into the url (default IP is 192.168.58.2)
 
     If it is your first time powering on the control box, it will ask you to enter the serial number (located on a small, silver sticker on top of the control box) then power cycle.
@@ -95,7 +103,7 @@ This repo contains a README with steps to set up controls for your OnRobot 3 Fin
 ![alt text](<PeriphProto.png>)
 
 
-### Step 3: Programming your gripper in the Web App
+## Step 3: Programming your gripper in the Web App
 
     Use the Lua progamming guide provided in this repo to use modbus read and write commands in your program. For register mapping and other information, reference the attached images below:
 
